@@ -522,8 +522,8 @@
                 var tagItem, localTag = objPropTransformer(tag, false);
                 localTag.title = utils.highlightTerm(utils.htmlEncode((localTag.title)), query);
                 tagItem = $(templates.tagsListItem(localTag)).data('tag', tag);
-                if(localTag.img) {
-                  tagItem = tagItem.prepend(imgOrIconTpl(localTag));
+                if(tag.img) {
+                  tagItem = tagItem.prepend(imgOrIconTpl(tag));
                 }
                 tagItem.appendTo(tagsDropDown);
 
